@@ -1,0 +1,145 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: rgb(246, 245, 245);
+}
+
+.logo {
+    max-width: 10rem;
+}
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: rgb(7, 7, 7);
+}
+
+
+@media screen and (min-width: 551px) {
+    .abrir-menu, 
+    .cerrar-menu {
+        display: none;
+    }
+
+    .nav {
+        display: flex;
+    }
+
+    .nav-list {
+        display: flex !important; 
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .abrir-menu {
+        display: block;
+        border: 0;
+        font-size: 2rem;
+        background-color: transparent;
+        cursor: pointer;
+        color: black;
+    }
+
+
+    .nav {
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: black;
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+    }
+
+    .nav.visible {
+        opacity: 1;
+        visibility: visible;
+        display: flex;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .nav-list li a {
+        color: aliceblue;
+    }
+}
+
+li{
+    font-size: 30px;
+    margin: 15px;
+}
+
+li:hover {
+    transform: translateY(-3px);
+    text-decoration: underline;
+}
+
+.container {
+    position: relative;
+    height: 100vh; /* Establecer altura del contenedor al 100% del viewport */
+    overflow: hidden;
+}
+
+.skewed-background {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    background-image: url('/assets/pista-de-padel-catral.jpeg');
+    background-size: cover;
+    background-position: center;
+    transform: skewY(-8deg); /* Inclinar hacia arriba (ajusta el ángulo según sea necesario) */
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: -25%; /* Ajustar la posición izquierda para que cubra toda la imagen con la inclinación */
+    width: 150%; /* Ajustar el ancho para cubrir la totalidad de la imagen inclinada */
+    height: 100%; /* Altura de la sección con corte diagonal */
+    background-color: rgba(0, 0, 255, 0.5); /* Azul transparente (ajusta el valor alpha según sea necesario) */
+    transform: skewY(8deg); /* Inclinar hacia abajo (mismo ángulo que .skewed-background pero en sentido contrario) */
+}
+
+/* Estilos para el contenido (logo y texto) */
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+.content img {
+    width: 150px; /* Ancho del logo */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 24px;
+    font-weight: bold;
+}
