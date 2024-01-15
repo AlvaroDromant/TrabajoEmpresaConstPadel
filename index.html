@@ -15,9 +15,9 @@
        <nav class="nav" id="nav">
           <button id="cerrar" class="cerrar-menu"><i class="bi bi-x-square"></i></button>
           <ul class="nav-list">
-              <li><a href="#">Inicio</a></li>
-              <li><a href="#">Acerca de</a></li>
-              <li><a href="#">Contacto</a></li>
+              <li><a class="no" href="#">Inicio</a></li>
+              <li><a class="no" href="#">Acerca de</a></li>
+              <li><a class="no" href="#">Contacto</a></li>
           </ul>
        </nav>
     </header>
@@ -36,6 +36,61 @@
             </div>
         </div>
     </div>
+
+    <p class="texto">Para garantizar la excelencia en nuestros servicios, hemos incorporado las mejores prácticas y técnicas de construcción de pistas, asegurándonos 
+    de ofrecer instalaciones de la más alta calidad. Nuestra dedicación a la investigación nos ha permitido no solo comprender los estándares actuales
+     de la industria, sino también anticiparnos a las tendencias emergentes y las demandas específicas de los practicantes de este deporte en constante evolución.
+    </p>
+
+    
+        <div class="containerdos">
+
+         <h3>Ventajas de trabajar con nosotros</h3>
+
+        <div class="card">
+
+          <img class="card-image" src="/assets/pista2.png" alt="Imagen 1">
+          <p class="card-description">Descripción de la imagen 1</p>
+          <button class="ver-mas" onclick="mostrarMas('info1')">Ver más</button>
+          <div id="info1" class="info-adicional">
+          <p>Información adicional aquí...</p>
+            
+          </div>
+          </div>
+    
+        <div class="card">
+
+          <img class="card-image" src="/assets/pista4.png" alt="Imagen 2">
+          <p class="card-description">Descripción de la imagen 2</p>
+          <button class="ver-mas" onclick="mostrarMas('info2')">Ver más</button>
+          <div id="info2" class="info-adicional">
+            <p>Información adicional aquí...</p>
+
+          </div>
+        </div>
+    </div>
+    
+
+    <footer>
+        <div class="columna">
+            <h2>Servicios</h2>
+            <ul class="enlaces">
+              <li><a href="#">Inicio</a></li>
+              <li><a href="#">Acerca de</a></li>
+              <li><a href="#">Contacto</a></li>
+            </ul>
+          </div>
+      
+          <div class="columna">
+            <h2>About</h2>
+            <p>Texto sobre nosotros y nuestra empresa.</p>
+          </div>
+      
+          <div class="columna">
+            <h2>Nombre de la Empresa</h2>
+            <p>Dirección de la empresa<br> Teléfono: xxx-xxx-xxxx</p>
+          </div>
+    </footer>
 
     <script src="/scripts/botonHam.js"></script>
     

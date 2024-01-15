@@ -99,31 +99,31 @@ li:hover {
 
 .container {
     position: relative;
-    height: 100vh; /* Establecer altura del contenedor al 100% del viewport */
+    height: 100vh; 
     overflow: hidden;
+    z-index: -1;
 }
 
 .skewed-background {
     position: relative;
     height: 100%;
     overflow: hidden;
-    background-image: url('/assets/pista-de-padel-catral.jpeg');
+    background-image: url('/assets/pista.jpeg');
     background-size: cover;
     background-position: center;
-    transform: skewY(-8deg); /* Inclinar hacia arriba (ajusta el ángulo según sea necesario) */
+    clip-path: polygon(50% 0%, 100% 0, 100% 36%, 100% 66%, 100% 81%, 49% 100%, 0 100%, 0 69%, 0 13%, 49% 0);
 }
 
-.overlay {
+.skewed-background::before{
+    content: "";
+    background: rgb(10, 20, 199);
     position: absolute;
-    bottom: 0;
-    left: -25%; /* Ajustar la posición izquierda para que cubra toda la imagen con la inclinación */
-    width: 150%; /* Ajustar el ancho para cubrir la totalidad de la imagen inclinada */
-    height: 100%; /* Altura de la sección con corte diagonal */
-    background-color: rgba(0, 0, 255, 0.5); /* Azul transparente (ajusta el valor alpha según sea necesario) */
-    transform: skewY(8deg); /* Inclinar hacia abajo (mismo ángulo que .skewed-background pero en sentido contrario) */
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
 }
 
-/* Estilos para el contenido (logo y texto) */
+
 .content {
     position: absolute;
     top: 50%;
@@ -134,7 +134,7 @@ li:hover {
 }
 
 .content img {
-    width: 150px; /* Ancho del logo */
+    width: 150px; 
     height: auto;
     margin-bottom: 20px;
 }
@@ -143,3 +143,77 @@ li:hover {
     font-size: 24px;
     font-weight: bold;
 }
+
+.texto {
+    font-weight: bold;
+    text-align: center;
+    margin: 8rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .columna {
+    flex: 1;
+    margin: 10px;
+    color: white;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .enlaces li a {
+    color: #fff;  /* Color blanco para los enlaces */
+    text-decoration: none;
+    font-size: .5em;
+  }
+
+  /*cards*/
+
+  .containerdos {
+    text-align: center;
+  }
+  
+  h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .card {
+    display: inline-block;
+    width: 200px; /* Ancho de las cartas */
+    margin: 1em;
+    padding: 10px;
+    border: 1px solid #ccc; /* Borde de 1 píxel de ancho en color gris claro */
+  }
+  
+  .card-image {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .card-description {
+    margin-top: 10px;
+  }
+  
+  .ver-mas {
+    margin-top: 10px;
+  }
+  
+  .info-adicional {
+    display: none;
+    margin-top: 10px;
+  }
+  

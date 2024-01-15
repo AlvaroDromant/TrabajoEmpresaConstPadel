@@ -9,3 +9,8 @@ abrir.addEventListener("click", () => {
 cerrar.addEventListener("click", () => {
     nav.classList.remove("visible")
 })
+
+function mostrarMas(id) {
+    var infoAdicional = document.getElementById(id);
+    infoAdicional.style.display = infoAdicional.style.display === 'none' ? 'block' : 'none';
+  }
