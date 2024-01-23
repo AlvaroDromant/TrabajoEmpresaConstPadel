@@ -244,16 +244,16 @@ h2 {
     cursor: pointer;
     border-radius: 0.5rem;
     transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-    background-color: #3498db; /* Color de fondo */
-    color: #fff; /* Color del texto */
-    border: 0.2rem solid #2980b9; /* Color del borde */
+    background-color: #3498db; 
+    color: #fff; 
+    border: 0.2rem solid #2980b9; 
 }
 
 .vermas:hover {
-    background-color: #2980b9; /* Cambio de color al pasar el ratón */
+    background-color: #2980b9; 
     color: #fff;
     border: 0.2rem solid #3498db;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3); /* Sutil sombra al pasar el ratón */
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3); 
 }
   
 
