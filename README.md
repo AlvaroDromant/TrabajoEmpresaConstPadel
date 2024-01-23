@@ -6,6 +6,6 @@
 
 **Pagina sobre una empresa constructora de pistas de padel**
 
-1. [Inicio](#inicio)
-2. [Acerca de](#acerca-de)
-3. [Contacto](#contacto)
+1. [Inicio](/index.html)
+2. [Acerca de](/acerca.html)
+3. [Contacto](/formulario.html)
